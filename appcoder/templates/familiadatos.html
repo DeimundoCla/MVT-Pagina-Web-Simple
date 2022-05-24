@@ -1,0 +1,76 @@
+<!doctype html>
+{%load static%}
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lista de Familiares</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  
+  <body id='bg' style="background-image: url('{%static 'img/gradienta.jpg'%}');">
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Familiar 1</h5>
+          </div>
+          <p></p>
+          <p class="mb-1">
+            {% for f in familiar|slice:":1" %}
+                <p>Nombre: {{f.nombre}} </p>
+                <p>DNI: {{f.dni}}</p>
+                <p>Fecha de nacimiento: {{f.fecha}}</p>
+                <p>Ciudad: {{f.ciudad}}</p>
+                <p>Email: {{f.email}}</p>
+            
+            {%endfor%}</p>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Familiar 2</h5>
+            </div>
+            <p></p>
+            <p class="mb-1">
+              {% for f in familiar|slice:"1:2" %}
+                  <p>Nombre: {{f.nombre}} </p>
+                  <p>DNI: {{f.dni}}</p>
+                  <p>Fecha de nacimiento: {{f.fecha}}</p>
+                  <p>Ciudad: {{f.ciudad}}</p>
+                  <p>Email: {{f.email}}</p>
+              
+              {%endfor%}</p>
+        </a>     
+        <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Familiar 3</h5>
+            </div>
+            <p></p>
+            <p class="mb-1">
+              {% for f in familiar|slice:"2:3" %}
+                  <p>Nombre: {{f.nombre}} </p>
+                  <p>DNI: {{f.dni}}</p>
+                  <p>Fecha de nacimiento: {{f.fecha}}</p>
+                  <p>Ciudad: {{f.ciudad}}</p>
+                  <p>Email: {{f.email}}</p>
+              
+              {%endfor%}</p>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Familiar 4</h5>
+            </div>
+            <p></p>
+            <p class="mb-1">
+              {% for f in familiar|slice:"3:4" %}
+                  <p>Nombre: {{f.nombre}} </p>
+                  <p>DNI: {{f.dni}}</p>
+                  <p>Fecha de nacimiento: {{f.fecha}}</p>
+                  <p>Ciudad: {{f.ciudad}}</p>
+                  <p>Email: {{f.email}}</p>
+              
+              {%endfor%}</p>
+          </a>    
+          
+      </div>
+
+  </body>
